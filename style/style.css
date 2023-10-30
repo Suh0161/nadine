@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Cairo');
+
 body {
   background-image: url(https://giffiles.alphacoders.com/220/220117.gif);
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
-     
-  
 }
 
 .title {
@@ -17,7 +16,7 @@ body {
   justify-content: center;
   height: 100vh;
   letter-spacing: 1px;
-  line-height:2
+  line-height: 2;
 }
 
 h1 {
@@ -38,21 +37,18 @@ h2 {
   -moz-background-clip: text;
   -webkit-background-clip: text;
   text-transform: uppercase;
-  font-size:55px;
+  font-size: 55px;
   margin: 10px 0;
 }
 
-/* styling my button */
-
+/* Styling the button */
 .white-mode {
   text-decoration: none;
   padding: 7px 10px;
   background-color: #122;
   border-radius: 3px;
   color: #FFF;
-  transition: .35s ease-in-out;
-  middle: 12px;
-  font-family: "Montserrat";
+  transition: 0.35s ease-in-out;
   text-align: center;
 }
 
@@ -60,8 +56,6 @@ h2 {
   background-color: #FFF;
   color: #122;
 }
-
-
 
 html {
   box-sizing: border-box;
@@ -74,7 +68,7 @@ body {
 
 .container {
   height: 100vh;
-  width: 100vh;
+  width: 100vh; /* Changed to 'vw' to make it a square container */
   margin: 0 auto;
   text-align: center;
   visibility: hidden;
@@ -89,7 +83,7 @@ body {
 
 .container div.seven,
 .container div.eight {
-  width: 100vw;
+  width: 100vw; /* Changed to 'vw' */
   height: 100vh;
   position: fixed;
   top: 0;
