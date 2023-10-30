@@ -1,5 +1,8 @@
 // Wrap your JavaScript code in a function to ensure it runs after the DOM has loaded
 window.onload = () => {
+  const firstPageContainer = document.getElementById("first-page");
+  const secondPageContainer = document.getElementById("second-page");
+
   const fetchData = () => {
     fetch("customize.json")
       .then(data => data.json())
@@ -38,4 +41,14 @@ window.onload = () => {
 
   // Run fetch and animation in sequence
   fetchData();
+
+  // Add an event listener to the "CLICK ME!!!" link
+  const clickMeLink = document.querySelector(".white-mode");
+  clickMeLink.addEventListener("click", () => {
+    // Hide the second page
+    secondPageContainer.style.display = "none";
+    
+    // Show the first page
+    firstPageContainer.style.display = "block";
+  });
 };
