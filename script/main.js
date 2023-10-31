@@ -296,11 +296,14 @@ const animationTimeline = () => {
   // tl.timeScale(2);
 
   // Restart Animation on click
-  const replyBtn = document.getElementById("replay");
-  replyBtn.addEventListener("click", () => {
-    tl.restart();
-  });
-};
+  const replayBtn = document.getElementById("replay");
+replayBtn.addEventListener("click", () => {
+  // Hide the second page (container) and show the first page (title)
+  const secondPageContainer = document.querySelector(".container");
+  const firstPageTitle = document.querySelector(".title");
+  secondPageContainer.style.display = "none";
+  firstPageTitle.style.display = "block";
+});
 
 // Run fetch and animation in sequence
 fetchData();
