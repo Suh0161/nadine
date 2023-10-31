@@ -1,5 +1,5 @@
 // Import the data to customize and insert them into page
-function fetchData() {
+const fetchData = () => {
   fetch("customize.json")
     .then(data => data.json())
     .then(data => {
@@ -17,12 +17,12 @@ function fetchData() {
 
         // Check if the iteration is over
         // Run amimation if so
-        if (dataArr.length === dataArr.indexOf(customData) + 1) {
+        if ( dataArr.length === dataArr.indexOf(customData) + 1 ) {
           animationTimeline();
-        }
+        } 
       });
     });
-}
+};
 
 // Animation Timeline
 const animationTimeline = () => {
@@ -295,12 +295,12 @@ const animationTimeline = () => {
   // tl.seek("currentStep");
   // tl.timeScale(2);
 
-  const replayBtn = document.getElementById("replay");
-replayBtn.addEventListener("click", () => {
-  // Redirect to the specified link (http://nvdinexo.me)
-  window.location.href = "https://nvdinexo.me";
-});
+  // Restart Animation on click
+  const replyBtn = document.getElementById("replay");
+  replyBtn.addEventListener("click", () => {
+    tl.restart();
+  });
+};
 
 // Run fetch and animation in sequence
-fetchData();{
-}
+fetchData();
