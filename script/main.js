@@ -295,14 +295,10 @@ const animationTimeline = () => {
   // tl.seek("currentStep");
   // tl.timeScale(2);
 
-  // Restart Animation on click
   const replayBtn = document.getElementById("replay");
 replayBtn.addEventListener("click", () => {
-  // Hide the second page (container) and show the first page (title)
-  const secondPageContainer = document.querySelector(".container");
-  const firstPageTitle = document.querySelector(".title");
-  secondPageContainer.style.display = "none";
-  firstPageTitle.style.display = "block";
+  // Redirect to the specified link (http://nvdinexo.me)
+  window.location.href = "http://nvdinexo.me";
 });
 
 // Run fetch and animation in sequence
