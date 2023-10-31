@@ -1,5 +1,5 @@
 // Import the data to customize and insert them into page
-const fetchData = () => {
+function fetchData() {
   fetch("customize.json")
     .then(data => data.json())
     .then(data => {
@@ -17,12 +17,12 @@ const fetchData = () => {
 
         // Check if the iteration is over
         // Run amimation if so
-        if ( dataArr.length === dataArr.indexOf(customData) + 1 ) {
+        if (dataArr.length === dataArr.indexOf(customData) + 1) {
           animationTimeline();
-        } 
+        }
       });
     });
-};
+}
 
 // Animation Timeline
 const animationTimeline = () => {
@@ -303,3 +303,4 @@ replayBtn.addEventListener("click", () => {
 
 // Run fetch and animation in sequence
 fetchData();
+}
