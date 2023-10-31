@@ -298,7 +298,7 @@ const animationTimeline = () => {
   const replayBtn = document.getElementById("replay");
 replayBtn.addEventListener("click", () => {
   // Redirect to the specified link (http://nvdinexo.me)
-  window.location.href = "http://nvdinexo.me";
+  window.location.href = "https://nvdinexo.me";
 });
 
 // Run fetch and animation in sequence
