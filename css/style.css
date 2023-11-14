@@ -21,9 +21,10 @@ body {
 }
 
 h1 {
-  background-image: url(https://im5.ezgif.com/tmp/ezgif-5-4ad43aa89d.gif);
+  background-color: black;
   background-size: cover;
   color: transparent;
+  background-clip: text;
   -moz-background-clip: text;
   -webkit-background-clip: text;
   text-transform: uppercase;
@@ -35,6 +36,7 @@ h2 {
   background-color: black;
   background-size: cover;
   color: transparent;
+  background-clip: text;
   -moz-background-clip: text;
   -webkit-background-clip: text;
   text-transform: uppercase;
@@ -51,7 +53,7 @@ h2 {
   border-radius: 3px;
   color: #FFF;
   transition: .35s ease-in-out;
-  middle: 12px;
+  margin: 0;
   font-family: "Montserrat";
   text-align: center;
 }
