@@ -295,12 +295,20 @@ const animationTimeline = () => {
   // tl.seek("currentStep");
   // tl.timeScale(2);
 
-  // Restart Animation on click
-  const replyBtn = document.getElementById("replay");
-  replyBtn.addEventListener("click", () => {
-    tl.restart();
-  });
-};
+ // Define your audio outside the event listener
+let audio = new Audio('https://raw.githubusercontent.com/Suh0161/nadine/master/hbd.mp3');
+audio.loop = true;
 
+// Restart Animation on click
+const replyBtn = document.getElementById("replay");
+replyBtn.addEventListener("click", () => {
+  tl.restart();
+  
+  // Stop the current audio (if any) and start playing again
+  audio.pause();
+  audio.currentTime = 0;
+  audio.play();
+});
+};
 // Run fetch and animation in sequence
 fetchData();
