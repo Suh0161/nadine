@@ -299,10 +299,10 @@ const animationTimeline = () => {
 let audio = new Audio('https://raw.githubusercontent.com/Suh0161/nadine/master/hbd.mp3');
 audio.loop = true;
 
-// Play the audio when the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function() {
+// Play the audio when the page loads
+window.onload = function() {
   audio.play();
-});
+};
 
 // Restart Animation on click
 const replyBtn = document.getElementById("replay");
@@ -314,7 +314,7 @@ replyBtn.addEventListener("click", () => {
   audio.currentTime = 0;
   audio.play();
 });
-};
+}
 // Run fetch and animation in sequence
 fetchData();
 
