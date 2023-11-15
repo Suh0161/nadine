@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Cairo');
+
 body {
   background-image: url(https://giffiles.alphacoders.com/220/220117.gif);
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
-     
-  
 }
 
 .title {
@@ -17,48 +16,54 @@ body {
   justify-content: center;
   height: 100vh;
   letter-spacing: 1px;
-  line-height:2
+  line-height: 2;
 }
 
 h1 {
-  background-color: black;
-  background-size: cover;
-  color: transparent;
-  background-clip: text;
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
-  text-transform: uppercase;
-  font-size: 120px;
-  margin: 10px 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+  color: black;
+  animation: fadeInZoom 2s ease-in-out;
 }
 
 h2 {
-  background-color: black;
-  background-size: cover;
-  color: transparent;
-  background-clip: text;
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
-  text-transform: uppercase;
-  font-size:55px;
-  margin: 10px 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 2em;
+  text-align: center;
+  color: black;
+  animation: fadeInZoom 2s ease-in-out;
 }
 
+@keyframes fadeInZoom {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
 /* styling my button */
 
 .white-mode {
+  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
-  padding: 7px 10px;
-  background-color: #122;
-  border-radius: 3px;
+  padding: 12px 25px;
+  background-color: transparent; /* make button transparent */
+  border: 2px solid #FFF; /* add border to make button visible */
+  border-radius: 25px;
   color: #FFF;
-  transition: .35s ease-in-out;
-  margin: 0;
-  font-family: "Montserrat";
+  transition: all .3s ease-in-out;
   text-align: center;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  animation: fadeInZoom 4.5s ease-in-out;
 }
 
 .white-mode:hover {
   background-color: #FFF;
   color: #122;
+  transform: scale(1.1);
+}
+
+@keyframes fadeInZoom {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
 }
