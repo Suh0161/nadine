@@ -295,9 +295,14 @@ const animationTimeline = () => {
   // tl.seek("currentStep");
   // tl.timeScale(2);
 
- // Define your audio outside the event listener
+// Define your audio
 let audio = new Audio('https://raw.githubusercontent.com/Suh0161/nadine/master/hbd.mp3');
 audio.loop = true;
+
+// Play the audio when the page loads
+window.onload = function() {
+  audio.play();
+};
 
 // Restart Animation on click
 const replyBtn = document.getElementById("replay");
@@ -312,3 +317,4 @@ replyBtn.addEventListener("click", () => {
 };
 // Run fetch and animation in sequence
 fetchData();
+
